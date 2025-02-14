@@ -118,7 +118,7 @@ const countWords = text => {
   const formattedText = text.replaceAll(".", "").replaceAll(",", "").split(" ");
 
   for (const word of formattedText) {
-    const oldValue = words.get(word) ?? 0;
+    const oldValue = words.get(word) || 0;
 
     words.set(word, oldValue + 1);
   }
